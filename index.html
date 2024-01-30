@@ -3,10 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="lib/swiper/swiper-bundle.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="font/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
     <title>Document</title>
 </head>
 <body>
+
+    <div class="wrapper">
+        <!-- Header start -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#!" class="header-logo"><img src="images/logo-header.svg" alt=""></a>
+                    <div class="header__navs">
+                        <div class="header__time">
+                            <span class="header__time-dot"></span>
+                            <p class="header__time-text">Звоните Пн. - Вс. <b>9:00 - 20:00</b></p>
+                        </div>
+
+                        <a href="tel:+375 (29) 128-97-53" class="header-num">+375 (29) 128-97-53</a>
+
+                        <div class="header__socicial">
+                            <a href="#!" class="header__socicial-link"><img src="images/icons/instagram.svg" alt=""></a>
+                            <a href="#!" class="header__socicial-link"><img src="images/icons/telegram.svg" alt=""></a>
+                            <a href="#!" class="header__socicial-link"><img src="images/icons/viber.svg" alt=""></a>
+                            <a href="#!" class="header__socicial-link"><img src="images/icons/whatsapp.svg" alt=""></a>
+                            <a href="#!" class="header__socicial-link"><img src="images/icons/behance.svg" alt=""></a>
+                        </div>
+
+                        <div class="header-lang">
+                            <a href="#!"><img src="images/icons/head-EN.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="header-items header-bars">
+                        <button type="button" class="bars-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+                                <g clip-path="url(#clip0_1_1241)">
+                                <path d="M25.98 0.520004H0.97998V3.645H25.98V0.520004Z" fill="#5E4A8A"/>
+                                <path d="M25.98 16.7742H5.97998V19.8992H25.98V16.7742Z" fill="#5E4A8A"/>
+                                <path d="M25.98 8.64709H0.97998V11.7721H25.98V8.64709Z" fill="#5E4A8A"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_1241">
+                                <rect width="25" height="19.38" fill="white" transform="translate(0.97998 0.520004)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <main class="main">
+            <!-- Home start -->
+            <section class="home">
+                <div class="container">
+                    <div class="home-content">
+                        <h1 class="home-title">Создаем <span>сайты и лендинги</span> для роста продаж в вашем бизнесе</h1>
+                        <div class="home-items">
+                            <div class="home-item">
+                                <img src="images/icons/home-item-icon1.svg" alt="" class="home-item__img">
+                                <div class="home-item__text">
+                                    <b>Скидка 10%</b> <br>
+                                    до 31 января
+                                </div>
+                            </div>
+                            <div class="home-item">
+                                <img src="images/icons/home-item-icon2.svg" alt="" class="home-item__img">
+                                <div class="home-item__text">
+                                    Рассрочка <br>  до
+                                    <b>3-х месяцев</b> 
+                                </div>
+                            </div>
+                            <div class="home-item">
+                                <img src="images/icons/home-item-icon3.svg" alt="" class="home-item__img">
+                                <div class="home-item__text">
+                                    При запуске рекламы <b>300$</b> на <br> рекламный кабинет в подарок
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#!" class="home-link">ОСТАВИТЬ ЗАЯВКУ И ПОЛУЧИТЬ КП</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Home end -->
+
+            <!-- Calculator start -->
+            <section class="calculator">
+                <div class="container">
+                    <div class="calculator-content">
+                        <div class="calculator-title__wrap">
+                            <h2 class="calculator-title">Калькулятор стоимости проекта</h2>
+                            <p class="calculator-text">Ответьте на 3 вопроса теста, чтобы получить персональное КП!</p>
+                        </div>
+                        <div class="calc-project">
+                            <div class="calc-project__nums">
+                                <span class="calc-project__num active">ВОПРОС 1</span>
+                                <span class="calc-project__num">ВОПРОС 2</span>
+                                <span class="calc-project__num">ВОПРОС 3</span>
+                            </div>
+                            <div class="calc-project__items">
+                                <div class="swiper calcProject">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="calc-project__item">
+                                                <h3 class="calc-project__title">Какая у Вас цель?</h3>
+                                                <div class="calc-project__tabs">
+                                                    <div class="calc-project__tab calc-project-next">
+                                                        <img src="images/calc-project-img1.svg" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Нужен сайт</span>
+                                                    </div>
+                                                    <div class="calc-project__tab calc-project-next">
+                                                        <img src="images/calc-project-img2.svg" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Нужны заявки</span>
+                                                    </div>
+                                                    <div class="calc-project__tab calc-project-next">
+                                                        <img src="images/calc-project-img3.svg" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Продвижение в соц. сетях</span>
+                                                    </div>
+                                                    <div class="calc-project__tab calc-project-next">
+                                                        <img src="images/calc-project-img4.svg" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Другое</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#!" class="calc-item__btn">Далее</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="calc-project__item">
+                                                <h3 class="calc-project__title">В какой сфере Ваш бизнес?</h3>
+                                                <div class="calc-check__items">
+                                                    <div class="calc-check__item calc-project-next">
+                                                        <input id="calcCheckInp1" type="radio" class="calc-check-inp">
+                                                        <label for="calcCheckInp1">Услуги</label>
+                                                    </div>
+                                                    <div class="calc-check__item calc-project-next">
+                                                        <input id="calcCheckInp2" type="radio" class="calc-check-inp">
+                                                        <label for="calcCheckInp2">Продажа товаров</label>
+                                                    </div>
+                                                    <div class="calc-check__item calc-project-next">
+                                                        <input id="calcCheckInp3" type="radio" class="calc-check-inp">
+                                                        <label for="calcCheckInp3">Другое</label>
+                                                    </div>
+                                                </div>
+                                                <a href="#!" class="calc-item__btn">Далее</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="calc-project__item">
+                                                <h3 class="calc-project__title">Какая у Вас цель?</h3>
+                                                <div class="calc-project__boxs">
+                                                    <div class="calc-project__box">
+                                                        <img src="images/calc-project-img5.png" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Реклама в Я.директ</span>
+                                                    </div>
+                                                    <div class="calc-project__box">
+                                                        <img src="images/calc-project-img6.png" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Реклама Google Ads</span>
+                                                    </div>
+                                                    <div class="calc-project__box">
+                                                        <img src="images/calc-project-img7.png" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Разработать квиз-опрос</span>
+                                                    </div>
+                                                    <div class="calc-project__box">
+                                                        <img src="images/calc-project-img8.png" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Таргет. реклама</span>
+                                                    </div>
+                                                    <div class="calc-project__box">
+                                                        <img src="images/calc-project-img9.png" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Нужна реклама в YouTube</span>
+                                                    </div>
+                                                    <div class="calc-project__box">
+                                                        <img src="images/calc-project-img10.png" alt="" class="calc-tab__img">
+                                                        <span class="calc-tab__text">Нужен лид.магнит</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#!" class="calc-item__btn2">Далее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Calculator end -->
+
+            <!-- Portfolio start -->
+            <section class="portfolio">
+                <div class="container">
+                    <h1 class="portfolio-title">Наше портфолио</h1>
+                    <div class="portfolio-content">
+                        <div class="portfolio-tabs">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-site-tab" data-bs-toggle="pill" data-bs-target="#pills-site" type="button" role="tab" aria-controls="pills-site" aria-selected="true">САЙТЫ</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-quiz-tab" data-bs-toggle="pill" data-bs-target="#pills-quiz" type="button" role="tab" aria-controls="pills-quiz" aria-selected="false">КВИЗ ОПРОСНИКИ</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-bot-tab" data-bs-toggle="pill" data-bs-target="#pills-bot" type="button" role="tab" aria-controls="pills-bot" aria-selected="false">ЧАТ-БОТЫ</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-items">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-site" role="tabpanel" aria-labelledby="pills-site-tab">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img1.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Интернет-магазин корейской косметики</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img2.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Интернет-магазин изделий из дерева</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img3.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Садовая техника</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img4.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Новостной портал “Брестский вестник”</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img5.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Жалюзи и декор</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img6.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Логистическая компания</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img7.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Доставка еды</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img8.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Сайт для Instagram-продажи женской одежды</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img9.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Изготовление памятников в Гомеле</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img6.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Логистическая компания</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img7.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Доставка еды</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img8.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Сайт для Instagram-продажи женской одежды</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img9.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Изготовление памятников в Гомеле</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img8.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Сайт для Instagram-продажи женской одежды</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img9.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Изготовление памятников в Гомеле</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
     
+                                    </div>
+                                    <button class="portfolio-more">Смотреть еще</button>
+                                    <button class="portfolio-remove">Скрыть все</button>
+                                </div>
+                                <div class="tab-pane fade" id="pills-quiz" role="tabpanel" aria-labelledby="pills-quiz-tab">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img1.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Интернет-магазин корейской косметики</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img2.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Интернет-магазин изделий из дерева</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img3.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Садовая техника</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item2-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img6.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Логистическая компания</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-4 p-1 item2-none">
+                                            <a href="#!" class="portfolio-item">
+                                                <img src="images/portfolio-item-img7.png" alt="" class="portfolio-item-img">
+                                                <div class="portfolio-item__content">
+                                                    <h4 class="portfolio-item__title">Доставка еды</h4>
+                                                    <button class="portfolio-item__btn">Смотреть</button>
+                                                </div>
+                                            </a>
+                                        </div>
+
+    
+                                    </div>
+                                    <button class="portfolio-more2">Смотреть еще</button>
+                                    <button class="portfolio-remove2">Скрыть все</button>
+                                </div>
+                                <div class="tab-pane fade" id="pills-bot" role="tabpanel" aria-labelledby="pills-bot-tab">...</div>
+                            </div>                              
+                        </div>
+                    </div>  
+                </div>
+            </section>
+            <!-- Portfolio end -->
+        </main>
+
+        <!-- Footer start -->
+        <footer class="footer">
+            <div class="container"></div>
+        </footer>
+        <!-- Footer end -->
+    </div>
+    
+    <script src="lib/bootstrap/popper.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
 </body>
 </html>
