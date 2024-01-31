@@ -54,6 +54,14 @@ document.addEventListener('DOMContentLoaded', function () {
         tab.classList.toggle('active');
     }));
 
+    
+    // messanger-item active
+    let messageItem = document.querySelectorAll('.messanger-item label');
+
+    messageItem.forEach(tab => tab.addEventListener('click', () => {
+        tab.classList.toggle('active');
+    }));
+
 
     // site functions 
     const selectFunctionSite = document.getElementById('select-function__site');
@@ -150,4 +158,62 @@ var teamSlide = new Swiper(".teamSlide", {
     },
     speed: 800,
 });
+
+
+
+// Input mask
+document.addEventListener('DOMContentLoaded', function () {
+    let phoneInputs = document.querySelectorAll('.phone-inp');
+    let phoneInput2 = document.getElementById('phoneModalInp');
+
+    phoneInputs.forEach(function (phoneInp) {
+        phoneInp.placeholder = 'Телефон';
+
+        let maskOptions = {
+            mask: '+375(00)000-00-00',
+            lazy: false
+        };
+
+        phoneInp.addEventListener('focus', function () {
+            new IMask(phoneInp, maskOptions);
+        });
+    });
+
+    phoneInput2.placeholder = '';
+
+    let maskOptions2 = {
+        mask: '+375(00)000-00-00',
+        lazy: false
+    };
+
+    phoneInput2.addEventListener('focus', function () {
+        new IMask(phoneInput2, maskOptions2);
+    });
+});
+
+
+// Home modal function
+document.addEventListener('DOMContentLoaded', function () {
+    const selectTab = document.querySelector('.select-tab');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownItems = document.querySelectorAll('.dropdown-menu li');
+
+    selectTab.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('active');
+    });
+
+    document.body.addEventListener('click', () => dropdownMenu.classList.remove('active'));
+
+    dropdownItems.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectTab.querySelector('span').textContent = item.textContent;
+            dropdownItems.forEach((otherItem) => otherItem.classList.remove('active'));
+            item.classList.add('active');
+            dropdownMenu.classList.remove('active');
+        });
+    });
+});
+
 
