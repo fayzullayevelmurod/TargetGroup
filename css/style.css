@@ -482,7 +482,10 @@ circle {
   height: 100%;
 }
 .portfolio-content .portfolio-item .portfolio-item__content {
-  margin-left: -100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -493,10 +496,14 @@ circle {
   color: #FFF;
   font-size: 24px;
   line-height: 30px;
+  font-weight: 700;
+  transition: 0.3s ease all;
+}
+.portfolio-content .portfolio-item .portfolio-item__content .portfolio-item__title2 {
+  color: #000;
 }
 .portfolio-content .portfolio-item .portfolio-item__content .portfolio-item__btn {
-  width: 100%;
-  max-width: 225px;
+  width: 225px;
   height: 48px;
   border: 2px solid #fff;
   border-radius: 13px;
@@ -514,16 +521,22 @@ circle {
   color: #000;
 }
 .portfolio-content .portfolio-item:hover > .portfolio-item__content {
-  z-index: 2;
-  justify-content: end;
+  top: auto;
+  bottom: 0;
+}
+.portfolio-content .portfolio-item:hover > .portfolio-item__content .portfolio-item__title2 {
+  color: #FFF;
 }
 .portfolio-content .portfolio-item:hover > .portfolio-item__content .portfolio-item__btn, .portfolio-content .portfolio-item:hover::before {
   opacity: 1;
 }
-.portfolio-content .item-none {
+.portfolio-content .item-none,
+.portfolio-content .item2-none {
   display: none;
 }
 .portfolio-content .portfolio-remove,
+.portfolio-content .portfolio-remove2,
+.portfolio-content .portfolio-more2,
 .portfolio-content .portfolio-more {
   color: #FFF;
   text-align: center;
@@ -539,6 +552,7 @@ circle {
   margin: 0 auto;
   margin-top: 55px;
 }
+.portfolio-content .portfolio-remove2,
 .portfolio-content .portfolio-remove {
   display: none;
 }/*# sourceMappingURL=style.css.map */

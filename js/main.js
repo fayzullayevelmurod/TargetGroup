@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    let hiddenItems = document.querySelectorAll('.item-none');
-    let moreButton = document.querySelectorAll('.portfolio-more');
-    let removeButton = document.querySelectorAll('.portfolio-remove');
+function setupPortfolio(hiddenItemsClass, moreButtonClass, removeButtonClass) {
+    let hiddenItems = document.querySelectorAll(hiddenItemsClass);
+    let moreButton = document.querySelector(moreButtonClass);
+    let removeButton = document.querySelector(removeButtonClass);
 
     moreButton.addEventListener('click', function () {
         hiddenItems.forEach(item => item.style.display = 'flex');
@@ -60,5 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Portfolio item clicked:', item.querySelector('.portfolio-item__title').textContent);
         });
     });
-});
+}
 
+document.addEventListener('DOMContentLoaded', function () {
+    setupPortfolio('.item-none', '.portfolio-more', '.portfolio-remove');
+    setupPortfolio('.item2-none', '.portfolio-more2', '.portfolio-remove2');
+});

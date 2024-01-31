@@ -501,7 +501,10 @@ circle {
                 height: 100%;
             }
             .portfolio-item__content{
-                margin-left: -100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
                 padding: 30px;
                 display: flex;
                 flex-direction: column;
@@ -512,10 +515,14 @@ circle {
                     color: #FFF;
                     font-size: 24px;
                     line-height: 30px;
+                    font-weight: 700;
+                    transition: .3s ease all;
+                    &2{
+                        color: #000;
+                    }
                 }
                 .portfolio-item__btn{
-                    width: 100%;
-                    max-width: 225px;
+                    width: 225px;
                     height: 48px;
                     border: 2px solid #fff;
                     border-radius: 13px;
@@ -535,20 +542,28 @@ circle {
             }
 
             &:hover>.portfolio-item__content{
-                z-index: 2;
-                justify-content: end;
+                top: auto;
+                bottom: 0;
             }
+            &:hover>.portfolio-item__content{
+                .portfolio-item__title2{
+                    color: #FFF;
+                }
+            } 
             &:hover > .portfolio-item__content .portfolio-item__btn,
             &:hover::before{
                 opacity: 1;
             }
         }
 
-        .item-none{
+        .item-none,
+        .item2-none{
             display: none;
         }
 
         .portfolio-remove,
+        .portfolio-remove2,
+        .portfolio-more2,
         .portfolio-more{
             color: #FFF;
             text-align: center;
@@ -564,6 +579,7 @@ circle {
             margin: 0 auto;
             margin-top: 55px;
         }
+        .portfolio-remove2,
         .portfolio-remove{
             display: none;
         }
