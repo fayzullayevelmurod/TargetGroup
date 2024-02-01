@@ -2274,6 +2274,9 @@ ul, li {
   .portfolio .container .portfolio-content {
     margin-top: 20px;
   }
+  .portfolio .container .portfolio-content .portfolio-tabs {
+    margin-bottom: 20px;
+  }
   .portfolio .container .portfolio-content .portfolio-tabs .nav-pills {
     gap: 5px;
   }
