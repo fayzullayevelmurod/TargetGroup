@@ -2435,7 +2435,17 @@ ul, li{
                     line-height: 18px;
                 }
             }
+            .menu{
+                width: 100%;
+                height: 100vh;
+
+                &-body {
+                    padding: 20px 20px 35px 20px;
+                }
+            }
         }
+
+        
     }
 
     .home {
@@ -2841,6 +2851,65 @@ ul, li{
     .footer{
         &-logo{
             margin-bottom: 20px;
+        }
+    }
+
+
+    .modal-home {
+        .modal-content {
+            .modal-poup-kp__body {
+                padding: 40px 20px;
+                .messanger{
+                    gap: 5px;
+                    label {
+                        width: 93px;
+                        height: 35px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img{
+                            width: 20px;
+                        }
+                    }
+                } 
+            }
+            .btn-close {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            p{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .site-free__modal ,
+    .site-function__modal{
+        .modal-content {
+            .modal-body{
+                padding: 55px 20px 45px 20px;
+                
+                .btn-close{
+                    top: 1rem;
+                    right: 1rem;
+                }
+
+                .btn-modal{
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 14px;
+                    transform: translate(0);
+                }
+                p{
+                    font-size: 14px;
+                    color: rgba(0, 0, 0, 0.38);
+                    line-height: 1.25;
+                }
+            }
         }
     }
    
