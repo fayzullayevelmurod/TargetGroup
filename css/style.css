@@ -2190,7 +2190,7 @@ ul, li {
   .portfolio .container {
     padding: 0;
   }
-  .portfolio .container-title {
+  .portfolio .container .portfolio-title {
     line-height: 29px;
     font-size: 24px;
     font-weight: 600;
