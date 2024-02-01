@@ -1629,6 +1629,91 @@ ul, li{
 // Footer end
 
 
+// Modal fixed
+.modal-open-quiz {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 10px 50px rgba(129, 60, 220, 0.3);
+    border-radius: 9px;
+    transition: transform cubic-bezier(0.6, -0.28, 0.74, 0.05) .4s;
+
+    &.active{
+        transform: translateY(-50%) translateX(0);
+    }
+
+    &-btn {
+        position: absolute;
+        right: -56px;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.33%);
+        box-shadow: 0px 10px 50px rgba(129, 60, 220, 0.15);
+        border-radius: 0 7px 7px 0;
+        transform: none;
+        text-align: center;
+        padding: 0;
+
+        i{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity ease .3s;
+        }
+        &.active{
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #fff;
+            right: -47px;
+            box-shadow: 0px 3.5px 3.5px rgba(0, 0, 0, 0.25);
+
+            i{
+                opacity: 1;
+            }
+            img{
+                opacity: 0;
+            }
+        }
+    }
+
+    .modal-open-quiz-card {
+        padding: 8px 20px 14px 18px;
+        display: flex;
+
+        &__body {
+            width: 165px;
+
+            p {
+                font-size: 14px;
+                margin: 3px 0 15px;
+                line-height: 1.25;
+            }
+            .btn-quiz {
+                width: 150px;
+                height: 40px;
+                font-size: 16px;
+                background-image: linear-gradient(90deg, #FF145D 0%, #FF8943 100%);
+                background-size: 100% 100%;
+                border-radius: 13px;
+                color: #fff;
+            }
+        }
+
+        &__img {
+            width: 56px;
+            height: 56px;
+            margin-left: 25px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}
+
 // Modal home
 .modal-home{
     .modal-content {
@@ -1906,6 +1991,8 @@ ul, li{
         }
     }
 }
+
+
 
 // Media queries
 @media screen and (max-width: 1400px){

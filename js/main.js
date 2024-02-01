@@ -110,6 +110,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const concatenatedText = Array.from(document.querySelectorAll('.site-function__card.active')).map(card => card.querySelector('span').textContent).join(', ');
     resultFunctionSite.textContent = concatenatedText;
+
+
+    // MODAL FIXED BODY
+    let openQuizBtn = document.querySelector('.modal-open-quiz-btn');
+    let quizCard = document.querySelector('.modal-open-quiz');
+
+    openQuizBtn.addEventListener('click', () => {
+        quizCard.classList.toggle('active');
+        openQuizBtn.classList.toggle('active');
+    });
+
+
 });
 
 
@@ -247,29 +259,25 @@ document.addEventListener('DOMContentLoaded', function () {
     let phoneInputs = document.querySelectorAll('.phone-inp');
     let phoneInput2 = document.getElementById('phoneModalInp');
 
-    phoneInputs.forEach(function (phoneInp) {
-        phoneInp.placeholder = 'Телефон';
-
+    function applyMask(input) {
         let maskOptions = {
             mask: '+375(00)000-00-00',
             lazy: false
         };
 
-        phoneInp.addEventListener('focus', function () {
-            new IMask(phoneInp, maskOptions);
+        input.placeholder = 'Телефон';
+
+        input.addEventListener('focus', function () {
+            new IMask(input, maskOptions);
         });
+    }
+
+    phoneInputs.forEach(function (phoneInp) {
+        applyMask(phoneInp);
     });
 
     phoneInput2.placeholder = '';
-
-    let maskOptions2 = {
-        mask: '+375(00)000-00-00',
-        lazy: false
-    };
-
-    phoneInput2.addEventListener('focus', function () {
-        new IMask(phoneInput2, maskOptions2);
-    });
+    applyMask(phoneInput2);
 });
 
 
