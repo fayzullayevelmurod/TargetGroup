@@ -1334,7 +1334,7 @@ ul, li {
 }
 
 .contact {
-  background-image: url(../images/contact-bg.png);
+  background-image: url(../images/contact-bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
