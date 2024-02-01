@@ -13,6 +13,7 @@ var calcProject = new Swiper(".calcProject", {
     followFinger: false,
 });
 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Header menu
     const barsBtn = document.querySelector('.bars-btn');
@@ -35,6 +36,28 @@ document.addEventListener('DOMContentLoaded', function () {
         tab.classList.toggle('active');
         nextButton.classList.toggle('active', tab.classList.contains('active'));
     }));
+    let i = 1;
+    document.querySelectorAll('.calc-project-next').forEach(el => {
+        el.onclick = () => {
+            if (i != 3) {
+                document.querySelectorAll('.calc-project__num').forEach((btn, idx) => {
+                    btn.classList.remove('active')
+                })
+                document.querySelectorAll('.calc-project__num')[i].classList.add('active');
+                i++;
+            }
+        }
+    })
+
+
+    // Calcl check active
+    let calcCheckLabel = document.querySelectorAll('.calc-check-label');
+    let calcBtn2 = document.getElementById('calc-btn2');
+    
+    calcCheckLabel.forEach(tab => tab.addEventListener('click', () => {
+        tab.classList.toggle('active');
+        calcBtn2.classList.toggle('active', calcCheckLabel.some(tab => tab.classList.contains('active')));
+    }));
 
 
     // Calc project box active
@@ -54,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tab.classList.toggle('active');
     }));
 
-    
+
     // messanger-item active
     let messageItem = document.querySelectorAll('.messanger-item label');
 
@@ -127,7 +150,6 @@ var clientSlide = new Swiper(".clientSlide", {
     grid: {
         rows: 2,
     },
-    spaceBetween: 52,
     autoplay: {
         delay: 1,
         disableOnInteraction: false
@@ -135,6 +157,30 @@ var clientSlide = new Swiper(".clientSlide", {
     speed: 1500,
     allowTouchMove: false,
     followFinger: false,
+
+    breakpoints: {
+        300: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+            grid: {
+                rows: 3,
+            },
+        },
+        776: {
+            slidesPerView: 5,
+            spaceBetween: 15,
+            grid: {
+                rows: 2,
+            },
+        },
+        1200: {
+            slidesPerView: 6,
+            spaceBetween: 15,
+            grid: {
+                rows: 2,
+            },
+        }
+    }
 });
 
 // Review slide
@@ -142,6 +188,21 @@ var reviewSlide = new Swiper(".reviewSlide", {
     slidesPerView: 4.5,
     spaceBetween: 45,
     speed: 800,
+    breakpoints: {
+        300: {
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+            centeredSlides: true,
+        },
+        776: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        991: {
+            slidesPerView: 4.5,
+            spaceBetween: 45,
+        }
+    }
 });
 
 // Team slide
@@ -157,6 +218,26 @@ var teamSlide = new Swiper(".teamSlide", {
         prevEl: ".team-button-prev",
     },
     speed: 800,
+    breakpoints: {
+        300: {
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+            centeredSlides: true,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        776: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        991: {
+            slidesPerView: 4,
+            spaceBetween: 45,
+        }
+    }
+
 });
 
 
@@ -217,3 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// video player
+const playerCaptions = new MediaElementPlayer('player', {
+    iconSprite: '../images/icons/play-icon.svg', // path to svg-spritemap for all icons
+});
