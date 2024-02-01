@@ -2497,7 +2497,10 @@ ul, li{
 
 @media screen and (max-width: 576px) {
     .header {
-        padding: 15px 0;
+        padding: 10px 0;
+        &-fixed{
+            padding: 6px 0;
+        }
 
         .header-content {
 
@@ -2537,7 +2540,8 @@ ul, li{
 
     .home {
         padding: 90px 0px 25px;
-        background-position: left;
+        background-image: none;
+        background-color: #FAEAFA;
 
         .home-content{
             .home-title {
