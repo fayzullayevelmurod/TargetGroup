@@ -13,6 +13,17 @@ var calcProject = new Swiper(".calcProject", {
     followFinger: false,
 });
 
+// Quiz slider
+var quizSlider = new Swiper(".swiper-popup-quiz", {
+    spaceBetween: 80,
+    navigation: {
+        nextEl: ".quiz-btn-next",
+    },
+    speed: 1000,
+    allowTouchMove: false,
+    followFinger: false,
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Header menu
@@ -50,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
-    // Calcl check active
+    // Calck check active
     let calcCheckLabel = document.querySelectorAll('.calc-check-label');
     let calcBtn2 = document.getElementById('calc-btn2');
     
@@ -68,6 +79,90 @@ document.addEventListener('DOMContentLoaded', function () {
         box.classList.toggle('active');
         nextButton2.classList.toggle('active', box.classList.contains('active'));
     }));
+
+
+
+
+    // Radio Group item
+    function handleRadioGroup(radioGroupItems, quizBtn) {
+        radioGroupItems.forEach(item => item.addEventListener('click', () => {
+            radioGroupItems.forEach(radioItem => radioItem.classList.remove('active'));
+            item.classList.add('active');
+            quizBtn.classList.add('active');
+        }));
+    }
+    
+    const radioGroupItems1 = document.querySelectorAll('.form_radio_group1 .form_radio_group-item');
+    const quizBtn1 = document.getElementById('quizBtnNext1');
+    handleRadioGroup(radioGroupItems1, quizBtn1);
+    
+    const radioGroupItems2 = document.querySelectorAll('.form_radio_group2 .form_radio_group-item');
+    const quizBtn2 = document.getElementById('quizBtnNext2');
+    handleRadioGroup(radioGroupItems2, quizBtn2);
+
+    const radioGroupItems3 = document.querySelectorAll('.form_radio_group3 .form_radio_group-item');
+    const quizBtn3 = document.getElementById('quizBtnNext3');
+    handleRadioGroup(radioGroupItems3, quizBtn3);
+
+    const radioGroupItems5 = document.querySelectorAll('.form_radio_group5 .form_radio_group-item');
+    const quizBtn5 = document.getElementById('quizBtnNext5');
+    handleRadioGroup(radioGroupItems5, quizBtn5);
+
+    const radioGroupItems6 = document.querySelectorAll('.form_radio_group6 .form_radio_group-item');
+    const quizBtn6 = document.getElementById('quizBtnNext6');
+    handleRadioGroup(radioGroupItems6, quizBtn6);
+
+
+    const quizGroup4 = document.querySelectorAll('.form_radio_group4 .form_radio_group-item');
+    const quizBtnNext4 = document.getElementById('quizBtnNext4');
+
+    quizGroup4.forEach(box => box.addEventListener('click', () => {
+        quizGroup4.forEach(radioItem => radioItem.classList.remove('active'));
+
+        box.classList.toggle('active');
+
+        quizBtnNext4.classList.toggle('active', box.classList.contains('active'));
+    }));
+
+
+
+    const quizGroupEndRight = document.querySelector('.modal-popup-quiz-item-right');
+    const quizGroupEndLeft = document.querySelector('.modal-popup-quiz-item-left');
+    const endTitle = document.querySelector('.modal-popup-quiz-item__title');
+    const quizProgressEnd = document.querySelector('.progress-bar-popup');
+    const quizProgressForm = document.querySelector('.modal-popup-quiz');
+    const quizBtnEnd = document.getElementById('quizBtnNext6');
+
+    quizBtnEnd.addEventListener('click', () => {
+        quizGroupEndLeft.classList.add('end-quiz');
+        quizGroupEndRight.classList.add('end-quiz');
+        quizProgressEnd.classList.add('end-quiz');
+        quizProgressForm.classList.add('end-quiz');
+        endTitle.classList.add('end-quiz');
+    });
+
+
+
+    // Modal Quiz start
+    let modalPopupQuiz = document.querySelector('.modal-popup-quiz');
+    let popupStarQuiz = document.querySelector('.popup-start-quiz');
+
+    popupStarQuiz.addEventListener('click', () => {
+        modalPopupQuiz.classList.toggle('active');
+    });
+
+    let modalPopupThank = document.querySelector('.modal-popup-quiz');
+    let modalPopupThankLeft = document.querySelector('.modal-popup-quiz-item-left');
+    let modalThankProgress = document.querySelector('.progress-bar-popup');
+    let popupStarThank = document.getElementById('quizBtnNext7');
+
+    popupStarThank.addEventListener('click', () => {
+        modalPopupThank.classList.toggle('active-thank');
+        modalPopupThankLeft.classList.toggle('active-thank');
+        modalThankProgress.classList.toggle('active-thank');
+    });
+
+
 
 
     // Site function active
