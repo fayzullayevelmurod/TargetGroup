@@ -19,6 +19,10 @@ var quizSlider = new Swiper(".swiper-popup-quiz", {
     navigation: {
         nextEl: ".quiz-btn-next",
     },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+    },
     speed: 1000,
     allowTouchMove: false,
     followFinger: false,
@@ -61,6 +65,7 @@ quizSlider.on('slideChange', function (e) {
         document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '13%';
         document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Если Вам нужна консультация по вопросам продвижения, Вы всегда можете связаться с нами!';
         document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(126deg)';
+        document.querySelector('.swiper-pagination').style.display = 'none';
     }
 });
 
@@ -191,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
     popupStarQuiz.addEventListener('click', () => {
         modalPopupQuiz.classList.toggle('active');
     });
+    
 
     let modalPopupThank = document.querySelector('.modal-popup-quiz');
     let modalPopupThankLeft = document.querySelector('.modal-popup-quiz-item-left');
@@ -202,8 +208,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modalPopupThankLeft.classList.toggle('active-thank');
         modalThankProgress.classList.toggle('active-thank');
     });
-
-
 
 
     // Site function active
