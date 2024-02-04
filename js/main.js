@@ -24,6 +24,45 @@ var quizSlider = new Swiper(".swiper-popup-quiz", {
     followFinger: false,
 });
 
+quizSlider.on('slideChange', function (e) {
+    if(quizSlider.activeIndex === 2) {
+        document.querySelector('.progress').setAttribute('data-value', 25);
+        document.querySelector('.progress-value span').textContent = '25%';
+        document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '4%';
+        document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Проконсультируйтесь с нашими специалистами, если не можете определиться с типом сайта';
+        document.querySelector('.progress-value span').classList.add('active');
+        document.querySelector('.progress-right .progress-bar').style.transform = 'rotate(90deg)';
+    }
+    if(quizSlider.activeIndex === 3) {
+        document.querySelector('.progress').setAttribute('data-value', 40);
+        document.querySelector('.progress-value span').textContent = '40%';
+        document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '5%';
+        document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Уникальный дизайн и функционал будет учитывать все тонкости Вашего бизнеса';
+        document.querySelector('.progress-right .progress-bar').style.transform = 'rotate(144deg)';
+    }
+    if(quizSlider.activeIndex === 4) {
+        document.querySelector('.progress').setAttribute('data-value', 50);
+        document.querySelector('.progress-value span').textContent = '50%';
+        document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '8%';
+        document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Если Вы пока не определились с функциями сайта, можете не отвечать на этот вопрос';
+        document.querySelector('.progress-right .progress-bar').style.transform = 'rotate(180deg)';
+    }
+    if(quizSlider.activeIndex === 5) {
+        document.querySelector('.progress').setAttribute('data-value', 70);
+        document.querySelector('.progress-value span').textContent = '70%';
+        document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '10%';
+        document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Если у Вас есть старый сайт, то существует возможность сохранить его историю и позиции в поисковых системах';
+        document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(72deg)';
+    }
+    if(quizSlider.activeIndex === 6) {
+        document.querySelector('.progress').setAttribute('data-value', 85);
+        document.querySelector('.progress-value span').textContent = '85%';
+        document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '13%';
+        document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Если Вам нужна консультация по вопросам продвижения, Вы всегда можете связаться с нами!';
+        document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(126deg)';
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Header menu
