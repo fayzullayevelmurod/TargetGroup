@@ -67,7 +67,11 @@ quizSlider.on('slideChange', function (e) {
         document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(126deg)';
         document.querySelector('.swiper-pagination').style.display = 'none';
     }
+    if(quizSlider.activeIndex === 8) {
+        document.getElementById('swiperPaginNone').style.display = 'none';
+    }
 });
+
 
 
 
