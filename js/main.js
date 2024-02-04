@@ -24,6 +24,7 @@ var quizSlider = new Swiper(".swiper-popup-quiz", {
     followFinger: false,
 });
 
+// Quiz function
 quizSlider.on('slideChange', function (e) {
     if(quizSlider.activeIndex === 2) {
         document.querySelector('.progress').setAttribute('data-value', 25);
@@ -62,6 +63,7 @@ quizSlider.on('slideChange', function (e) {
         document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(126deg)';
     }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
