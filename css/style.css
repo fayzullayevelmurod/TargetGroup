@@ -228,6 +228,11 @@ ul, li {
        column-gap: 20px;
   row-gap: 40px;
 }
+.header-content .menu-body .menu-item__wrap .menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 .header-content .menu-body .menu-item__wrap .menu-item {
   display: flex;
   flex-direction: column;
@@ -1478,30 +1483,6 @@ ul, li {
 }
 .footer-content .footer-info__item .footer-info__links .footer-info__link:hover {
   border-color: #1A2252;
-}
-.footer .copright {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 11px 0px 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  margin-top: 52px;
-}
-.footer .copright-info {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.footer .copright-info span,
-.footer .copright-info a {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 16px;
-  line-height: 24px;
-}
-.footer .copright span {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .modal-open-quiz {
@@ -2906,9 +2887,6 @@ ul, li {
   }
 }
 @media screen and (max-width: 991px) {
-  .header .header-lang img {
-    width: 25px;
-  }
   .header .header-content .bars-btn {
     padding: 3px 7px 4px;
     width: 33px;
@@ -3050,11 +3028,6 @@ ul, li {
   .footer .footer-content .footer-info .footer-info__item .footer-info__links {
     justify-content: center;
     align-items: center;
-  }
-  .footer .copright-info,
-  .footer .copright {
-    flex-wrap: wrap;
-    gap: 15px;
   }
   .contact-content .order1 {
     order: 1;
@@ -3392,9 +3365,6 @@ ul, li {
   .header-content .header__navs .header-num {
     font-size: 20px;
     line-height: 22px;
-  }
-  .header-content .header-lang {
-    display: none;
   }
   .home {
     padding: 170px 0px 80px;
