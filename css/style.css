@@ -1215,9 +1215,6 @@ ul, li {
 .review-slider::-webkit-scrollbar {
   height: 0;
 }
-.review-slider .swiper-slide {
-  width: 20%;
-}
 .review-slider .swiper-slide .player {
   position: relative;
   width: 100%;
