@@ -13,6 +13,15 @@ var calcProject = new Swiper(".calcProject", {
     followFinger: false,
 });
 
+calcProject.on('slideChange', function (e) {
+    if(calcProject.activeIndex === 3) {
+        document.querySelector('.calc-project__nums').style.display = 'none';
+        document.querySelector('.calculator-title__wrap').style.display = 'none';
+    }
+});
+
+
+
 // Quiz slider
 var quizSlider = new Swiper(".swiper-popup-quiz", {
     spaceBetween: 80,
@@ -310,7 +319,7 @@ var clientSlide = new Swiper(".clientSlide", {
         delay: 1,
         disableOnInteraction: false
     },
-    speed: 1500,
+    speed: 1800,
     allowTouchMove: false,
     followFinger: false,
 
@@ -405,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function applyMask(input) {
         let maskOptions = {
-            mask: '+8 (000) 000-00-00',
+            mask: '+7 (000) 000-00-00',
             lazy: false
         };
 
@@ -422,6 +431,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     phoneInput2.placeholder = '';
     applyMask(phoneInput2);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    let phoneInputs = document.querySelectorAll('.calc-form__float .calc-phone-inp, .quiz-phone-inp');
+
+    function applyMask(input) {
+        let maskOptions = {
+            mask: '+7 (000) 000-00-00',
+            lazy: false
+        };
+
+        input.placeholder = '';
+
+        input.addEventListener('focus', function () {
+            new IMask(input, maskOptions);
+        });
+    }
+
+    phoneInputs.forEach(function (phoneInp) {
+        applyMask(phoneInp);
+    });
+
 });
 
 

@@ -318,7 +318,7 @@ ul, li{
 
 // Home start
 .home{
-    background-image: url(../images/home-bg.webp);
+    background-image: url(../images/home-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -331,7 +331,7 @@ ul, li{
             color: #1A2252;
             width: 617px;
             font-size: 40px;
-            font-weight: 500;
+            font-weight: 800;
             line-height: 48px; 
             span{
                 background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
@@ -408,7 +408,7 @@ ul, li{
         .calculator-title{
             color: #423065;
             font-size: 30px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 36px;
             padding: 0 15px;
         }
@@ -459,6 +459,160 @@ ul, li{
                             line-height: 30px; /* 120% */
                             letter-spacing: -0.375px;
                         }
+
+                        &-title{
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            background-image: -webkit-gradient(linear,left top, right top,from(#ff1360),color-stop(95.32%, #ff8843));
+                            background-image: -o-linear-gradient(left,#ff1360,#ff8843 95.32%);
+                            background-image: linear-gradient(90deg,#ff1360,#ff8843 95.32%);
+                            color: transparent;
+                            text-align: center;
+                            font-size: 35px;
+                            font-weight: 800;
+                        }
+                        &-text{
+                            text-align: center;
+                            font-size: 22px;
+                            margin-bottom: 0;
+                        }
+                        
+                        &-form{
+                            background-image: url(../images/calc-form-bg.png);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: left -30px bottom -20px;
+                            p{
+                                text-align: center;
+                                font-size: 24px;
+                                margin: 45px 0 50px;
+                                color: #000;
+                            }
+
+                            .calc-form__boxs{
+                                display: flex;
+                                flex-direction: column;
+                                width: 570px;
+                                margin: 0 auto;
+
+                                .calc-form__box{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 16px;
+
+                                    .calc-form__float{
+                                        position: relative;
+                                        .form-control{
+                                            display: block;
+                                            width: 100%;
+                                            font-size: 1rem;
+                                            font-weight: 400;
+                                            color: #212529;
+                                            background-color: #fff;
+                                            background-clip: padding-box;
+                                            border: 1px solid #ced4da;
+                                            appearance: none;
+                                            border-radius: 0.25rem;
+                                            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                                            border-color: #423065;
+                                            border-radius: 13px;
+                                            height: calc(3.5rem + 2px);
+                                            line-height: 1.25;
+                                            padding: 1rem 0.75rem;
+                                            
+    
+                                            &:focus, 
+                                            &:not(:placeholder-shown) {
+                                                padding-top: 1.625rem;
+                                                padding-bottom: 1rem;
+                                            }
+                                            &:focus {
+                                                border-color: #423065;
+                                                -webkit-box-shadow: 0 0 0 0.25rem rgba(66, 48, 101, .25);
+                                                box-shadow: 0 0 0 0.25rem rgba(66, 48, 101, .25);
+                                                color: #212529;
+                                                background-color: #fff;
+                                            }
+                                            &:focus~label, 
+                                            &:not(:placeholder-shown)~label {
+                                                opacity: .65;
+                                                transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+                                            }
+                                        }
+                                        label {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            height: 100%;
+                                            padding: 1rem 0.75rem;
+                                            pointer-events: none;
+                                            border: 1px solid transparent;
+                                            transform-origin: 0 0;
+                                            transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+                                        }
+                                    }
+                                }
+                                
+                                .calc-projec__checked{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: flex-end;
+                                    flex-wrap: wrap;
+                                    margin-top: 80px;
+
+                                    .radio{
+                                        width: 260px;
+                                        margin: 0;
+                                        display: flex;
+                                        input[type=radio] {
+                                            position: absolute;
+                                            opacity: 0;
+                                            cursor: pointer;
+                                        }
+                                        label {
+                                            cursor: pointer;
+                                            line-height: 1.75;
+
+                                            &:before {
+                                                content: "";
+                                                border-radius: 100%;
+                                                border: 2px solid #423065;
+                                                display: inline-block;
+                                                width: 28px;
+                                                height: 28px;
+                                                position: relative;
+                                                top: 0;
+                                                margin-right: 11px;
+                                                vertical-align: top;
+                                                cursor: pointer;
+                                                text-align: center;
+                                                transition: all 250ms ease;
+                                            }
+
+                                            a {
+                                                display: inline-block;
+                                                margin-left: 38px;
+                                                margin-top: -5px;
+                                                position: relative;
+                                                display: inline-block;
+                                                text-decoration: none;
+                                                color: #FF0000;
+                                                transition: all ease 0.15s;
+                                                span{
+                                                    border-bottom: 1px solid #FF0000;
+                                                }
+                                            }
+                                        }
+                                        input[type=radio]:checked + .radio-label:before {
+                                            background-color: #423065;
+                                            -webkit-box-shadow: inset 0 0 0 4px #f4f4f4;
+                                            box-shadow: inset 0 0 0 4px #f4f4f4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
 
                         .calc-project__boxs,
                         .calc-project__tabs{
@@ -516,6 +670,7 @@ ul, li{
                             }
                             .calc-project__box.active>.calc-item__btn2{
                                 opacity: 1;
+                                pointer-events: all;
                             }
                         }
 
@@ -571,7 +726,10 @@ ul, li{
                             }
                         }
                     }
-    
+                    
+                    .calc-item__btn2{
+                        pointer-events: none;
+                    }
                     .calc-item__btn2,
                     .calc-item__btn{
                         width: 270px;
@@ -589,6 +747,7 @@ ul, li{
     
                         &.active {
                             opacity: 1;
+                            pointer-events: all;
                         }
                     }
                 }
@@ -605,7 +764,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; 
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -774,7 +933,7 @@ ul, li{
             color: #1A2252;
             text-align: center;
             font-size: 32px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 38.4px;
             margin-bottom: 50px;
         }
@@ -849,7 +1008,7 @@ ul, li{
             .site-function__title{
                 color: #1A2252;
                 font-size: 32px;
-                font-weight: 600;
+                font-weight: 800;
                 line-height: 38.4px; /* 120% */
             }
 
@@ -1032,7 +1191,7 @@ ul, li{
             .site-free-title{
                 color: #3540A7;
                 font-size: 35px;
-                font-weight: 600;
+                font-weight: 800;
                 line-height: 42px;
                 span{
                     background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
@@ -1076,7 +1235,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; /* 120% */
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -1214,7 +1373,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; /* 120% */
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -1276,7 +1435,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; /* 120% */
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -1287,6 +1446,7 @@ ul, li{
     &-slider{
         margin-top: 32px;
         padding-left: 13px;
+       
 
         .swiper-grid-column>.swiper-wrapper{
             flex-direction: inherit;
@@ -1294,6 +1454,10 @@ ul, li{
         }
         .client-img{
             width: 100%;
+            background-color: #F8F8F8;
+            border: 1px solid #C5C5C5;
+            border-radius: 14px;
+            text-align: center;
         }
     }
 }
@@ -1307,7 +1471,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; /* 120% */
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -1350,8 +1514,14 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; /* 120% */
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: -webkit-gradient(linear,left top, right top,from(#ff1360),color-stop(95.32%, #ff8843));
+        background-image: -o-linear-gradient(left,#ff1360,#ff8843 95.32%);
+        background-image: linear-gradient(90deg,#ff1360,#ff8843 95.32%);
+        color: transparent;
     }
     &-slider{
         margin-top: 32px;
@@ -1438,7 +1608,7 @@ ul, li{
             h1{
                 text-align: center;
                 font-size: 32px;
-                font-weight: 500;
+                font-weight: 800;
                 line-height: 38.4px;
                 background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
                 background-clip: text;
@@ -1449,7 +1619,7 @@ ul, li{
                 color: #1A2252;
                 text-align: center;
                 font-size: 20px;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 24px;
             }
         }
@@ -1496,7 +1666,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 500;
+        font-weight: 800;
         line-height: 52.8px; /* 120% */
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -1550,7 +1720,7 @@ ul, li{
                 span{
                     color: #1A2252;
                     font-size: 28px;
-                    font-weight: 500;
+                    font-weight: 600;
                     line-height: 33.6px;
                 }
 
@@ -1570,6 +1740,8 @@ ul, li{
             iframe{
                 width: 100%; 
                 height: 480px;
+                border-radius: 16px;
+
             }
         }
     }
@@ -3295,6 +3467,28 @@ ul, li{
             }
         }
     }
+
+    .calculator-content {
+        .calc-project__items {
+            .swiper-slide {
+                .calc-project__item {
+                    &-title{
+                        font-size: 40px;
+                    }
+                    &-form{
+                        background-image: none;
+                        p{
+                            font-size: 16px;
+                        }
+                        .calc-projec-form-btn{
+                            width: 180px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 991px){
@@ -3737,11 +3931,6 @@ ul, li{
                     :not(.swiper-slide9) .swiper-pagination {
                         display: none !important;
                     }
-                    // .swiper-slide9.swiper-slide-active{
-                    //     .swiper-pagination{
-                    //         display: none !important;
-                    //     }
-                    // }
                 }
 
                 .progress-bar-popup {
@@ -3895,7 +4084,6 @@ ul, li{
                 font-size: 30px;
                 line-height: 34px;
                 width: 100%;
-                font-weight: 600;
             }
             .home-items {
                 gap: 25px;
@@ -3921,6 +4109,14 @@ ul, li{
                             &:nth-child(6){
                                 display: none;
                             }
+                        }
+                    }
+
+                    &-form{
+                        background-image: none;
+
+                        .calc-form__boxs {
+                            width: 100%;
                         }
                     }
                 }
@@ -4017,6 +4213,9 @@ ul, li{
             .home-title {
                 font-size: 24px;
                 line-height: 28px;
+                span{
+                    display: block;
+                }
             }
             .home-items {
                 justify-content: center;
@@ -4040,6 +4239,7 @@ ul, li{
                     font-size: 24px;
                     line-height: 28px;
                     text-align: center;
+                    font-weight: 600;
                 }
                 .calculator-text{
                     text-align: center;
@@ -4081,6 +4281,35 @@ ul, li{
                                     }
                                 }
                             }
+
+                            &-title{
+                                font-size: 25px;
+                            }
+                            &-text{
+                                display: none;
+                            }
+                            &-form{
+                                p{
+                                    margin: 10px 0 16px;
+                                }
+                                .calc-form__boxs{
+                                    .calc-projec__checked{
+                                        flex-direction: column;
+                                        gap: 35px;
+                                        align-items: start;
+                                        .radio{
+                                            width: 100%;
+                                            label a {
+                                                margin-left: 5px;
+                                                display: inline;
+                                            }
+                                        }
+                                    }
+                                }
+                                .calc-projec-form-btn{
+                                    width: 100%;
+                                }
+                            }
                         }
 
                         .calc-item__btn2, 
@@ -4105,7 +4334,6 @@ ul, li{
             .portfolio-title{
                 line-height: 29px;
                 font-size: 24px;
-                font-weight: 600;
             }
             .portfolio-content {
                 margin-top: 20px;
