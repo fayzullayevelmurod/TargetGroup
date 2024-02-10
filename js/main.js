@@ -185,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
     const quizGroupEndRight = document.querySelector('.modal-popup-quiz-item-right');
     const quizGroupEndLeft = document.querySelector('.modal-popup-quiz-item-left');
     const endTitle = document.querySelector('.modal-popup-quiz-item__title');
@@ -352,7 +353,9 @@ var clientSlide = new Swiper(".clientSlide", {
 var reviewSlide = new Swiper(".reviewSlide", {
     slidesPerView: 4.5,
     spaceBetween: 45,
-    speed: 800,
+    pagination: {
+        clickable: true,
+    },
     breakpoints: {
         300: {
             slidesPerView: 1.5,
@@ -484,4 +487,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // video player
 const playerCaptions = new MediaElementPlayer('player', {
     iconSprite: '../images/icons/play-icon.svg', // path to svg-spritemap for all icons
+});
+
+const firstVideo = document.getElementById('firstVideo');
+const secondVideo = document.getElementById('secondVideo');
+
+firstVideo.addEventListener('ended', function() {
+    // Birinci video tamamlandığında, ikinci videoyu oynat
+    secondVideo.play();
 });
