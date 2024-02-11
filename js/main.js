@@ -14,7 +14,7 @@ var calcProject = new Swiper(".calcProject", {
 });
 
 calcProject.on('slideChange', function (e) {
-    if(calcProject.activeIndex === 3) {
+    if (calcProject.activeIndex === 3) {
         document.querySelector('.calc-project__nums').style.display = 'none';
         document.querySelector('.calculator-title__wrap').style.display = 'none';
     }
@@ -39,7 +39,7 @@ var quizSlider = new Swiper(".swiper-popup-quiz", {
 
 // Quiz function
 quizSlider.on('slideChange', function (e) {
-    if(quizSlider.activeIndex === 2) {
+    if (quizSlider.activeIndex === 2) {
         document.querySelector('.progress').setAttribute('data-value', 25);
         document.querySelector('.progress-value span').textContent = '25%';
         document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '4%';
@@ -47,28 +47,28 @@ quizSlider.on('slideChange', function (e) {
         document.querySelector('.progress-value span').classList.add('active');
         document.querySelector('.progress-right .progress-bar').style.transform = 'rotate(90deg)';
     }
-    if(quizSlider.activeIndex === 3) {
+    if (quizSlider.activeIndex === 3) {
         document.querySelector('.progress').setAttribute('data-value', 40);
         document.querySelector('.progress-value span').textContent = '40%';
         document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '5%';
         document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Уникальный дизайн и функционал будет учитывать все тонкости Вашего бизнеса';
         document.querySelector('.progress-right .progress-bar').style.transform = 'rotate(144deg)';
     }
-    if(quizSlider.activeIndex === 4) {
+    if (quizSlider.activeIndex === 4) {
         document.querySelector('.progress').setAttribute('data-value', 50);
         document.querySelector('.progress-value span').textContent = '50%';
         document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '8%';
         document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Если Вы пока не определились с функциями сайта, можете не отвечать на этот вопрос';
         document.querySelector('.progress-right .progress-bar').style.transform = 'rotate(180deg)';
     }
-    if(quizSlider.activeIndex === 5) {
+    if (quizSlider.activeIndex === 5) {
         document.querySelector('.progress').setAttribute('data-value', 70);
         document.querySelector('.progress-value span').textContent = '70%';
         document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '10%';
         document.querySelector('.modal-popup-quiz-item__quest-desc').textContent = 'Если у Вас есть старый сайт, то существует возможность сохранить его историю и позиции в поисковых системах';
         document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(72deg)';
     }
-    if(quizSlider.activeIndex === 6) {
+    if (quizSlider.activeIndex === 6) {
         document.querySelector('.progress').setAttribute('data-value', 85);
         document.querySelector('.progress-value span').textContent = '85%';
         document.querySelector('.modal-popup-quiz-item__sale-number').textContent = '13%';
@@ -76,7 +76,7 @@ quizSlider.on('slideChange', function (e) {
         document.querySelector('.progress-left .progress-bar').style.transform = 'rotate(126deg)';
         document.querySelector('.swiper-pagination').style.display = 'none';
     }
-    if(quizSlider.activeIndex === 8) {
+    if (quizSlider.activeIndex === 8) {
         document.getElementById('swiperPaginNone').style.display = 'none';
     }
 });
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Calck check active
     let calcCheckLabel = document.querySelectorAll('.calc-check-label');
     let calcBtn2 = document.getElementById('calc-btn2');
-    
+
     calcCheckLabel.forEach(tab => tab.addEventListener('click', () => {
         tab.classList.toggle('active');
         calcBtn2.classList.toggle('active', calcCheckLabel.some(tab => tab.classList.contains('active')));
@@ -150,11 +150,11 @@ document.addEventListener('DOMContentLoaded', function () {
             quizBtn.classList.add('active');
         }));
     }
-    
+
     const radioGroupItems1 = document.querySelectorAll('.form_radio_group1 .form_radio_group-item');
     const quizBtn1 = document.getElementById('quizBtnNext1');
     handleRadioGroup(radioGroupItems1, quizBtn1);
-    
+
     const radioGroupItems2 = document.querySelectorAll('.form_radio_group2 .form_radio_group-item');
     const quizBtn2 = document.getElementById('quizBtnNext2');
     handleRadioGroup(radioGroupItems2, quizBtn2);
@@ -167,25 +167,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const quizBtn5 = document.getElementById('quizBtnNext5');
     handleRadioGroup(radioGroupItems5, quizBtn5);
 
-    const radioGroupItems6 = document.querySelectorAll('.form_radio_group6 .form_radio_group-item');
-    const quizBtn6 = document.getElementById('quizBtnNext6');
-    handleRadioGroup(radioGroupItems6, quizBtn6);
 
-
+    // ----------------------------------------------------------------
     const quizGroup4 = document.querySelectorAll('.form_radio_group4 .form_radio_group-item');
     const quizBtnNext4 = document.getElementById('quizBtnNext4');
 
     quizGroup4.forEach(box => box.addEventListener('click', () => {
-        quizGroup4.forEach(radioItem => radioItem.classList.remove('active'));
+        if (!box.classList.contains('active')) {
+            box.classList.add('active');
+            quizBtnNext4.classList.add('active');
+        }
+    }));
 
-        box.classList.toggle('active');
 
-        quizBtnNext4.classList.toggle('active', box.classList.contains('active'));
+    const quizGroup6 = document.querySelectorAll('.form_radio_group6 .form_radio_group-item');
+    const quizBtnNext6 = document.getElementById('quizBtnNext6');
+
+    quizGroup6.forEach(box => box.addEventListener('click', () => {
+        if (!box.classList.contains('active')) {
+            box.classList.add('active');
+            quizBtnNext6.classList.add('active');
+        }
     }));
 
 
 
-
+    // =================================================================
     const quizGroupEndRight = document.querySelector('.modal-popup-quiz-item-right');
     const quizGroupEndLeft = document.querySelector('.modal-popup-quiz-item-left');
     const endTitle = document.querySelector('.modal-popup-quiz-item__title');
@@ -210,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
     popupStarQuiz.addEventListener('click', () => {
         modalPopupQuiz.classList.toggle('active');
     });
-    
+
 
     let modalPopupThank = document.querySelector('.modal-popup-quiz');
     let modalPopupThankLeft = document.querySelector('.modal-popup-quiz-item-left');
@@ -492,7 +499,7 @@ const playerCaptions = new MediaElementPlayer('player', {
 const firstVideo = document.getElementById('firstVideo');
 const secondVideo = document.getElementById('secondVideo');
 
-firstVideo.addEventListener('ended', function() {
+firstVideo.addEventListener('ended', function () {
     // Birinci video tamamlandığında, ikinci videoyu oynat
     secondVideo.play();
 });
