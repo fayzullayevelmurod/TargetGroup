@@ -4,7 +4,7 @@ window.addEventListener('scroll', function () {
 });
 
 // Calc project tab active
-var calcProject = new Swiper(".calcProject", {
+let calcProject = new Swiper(".calcProject", {
     navigation: {
         nextEl: ".calc-project-next",
     },
@@ -20,10 +20,8 @@ calcProject.on('slideChange', function (e) {
     }
 });
 
-
-
 // Quiz slider
-var quizSlider = new Swiper(".swiper-popup-quiz", {
+let quizSlider = new Swiper(".swiper-popup-quiz", {
     spaceBetween: 80,
     navigation: {
         nextEl: ".quiz-btn-next",
@@ -80,7 +78,6 @@ quizSlider.on('slideChange', function (e) {
         document.getElementById('swiperPaginNone').style.display = 'none';
     }
 });
-
 
 
 
@@ -316,9 +313,23 @@ document.addEventListener('DOMContentLoaded', function () {
     setupPortfolio('.item2-none', '.portfolio-more2', '.portfolio-remove2');
 });
 
+// Home date
+// Bugungi sana
+let bugungiSana = new Date();
+let bugun = bugungiSana.getDate();
+let fevralNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+let fevral = fevralNames[bugungiSana.getMonth()]; // Bugungi oy nomi
+
+// Bugun + 2 kun
+bugungiSana.setDate(bugun + 2);
+let ertangiSana = bugungiSana.getDate();
+let ertangiFevral = fevralNames[bugungiSana.getMonth()]; 
+
+document.querySelector('.home-item__text-date').textContent = 'до ' + ertangiSana + ' ' + ertangiFevral;
+
 
 // Client slide
-var clientSlide = new Swiper(".clientSlide", {
+let clientSlide = new Swiper(".clientSlide", {
     slidesPerView: 6,
     grid: {
         rows: 2,
@@ -357,7 +368,7 @@ var clientSlide = new Swiper(".clientSlide", {
 });
 
 // Review slide
-var reviewSlide = new Swiper(".reviewSlide", {
+let reviewSlide = new Swiper(".reviewSlide", {
     slidesPerView: 4.5,
     spaceBetween: 45,
     pagination: {
@@ -381,7 +392,7 @@ var reviewSlide = new Swiper(".reviewSlide", {
 });
 
 // Team slide
-var teamSlide = new Swiper(".teamSlide", {
+let teamSlide = new Swiper(".teamSlide", {
     slidesPerView: 4,
     spaceBetween: 45,
     pagination: {
@@ -414,8 +425,6 @@ var teamSlide = new Swiper(".teamSlide", {
     }
 
 });
-
-
 
 // Input mask
 document.addEventListener('DOMContentLoaded', function () {

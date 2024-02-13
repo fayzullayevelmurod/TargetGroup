@@ -387,6 +387,7 @@ ul, li{
             font-size: 16px;
             line-height: 24px;
             margin-top: 45px;
+            font-weight: 900;
             &:hover{
                 background-size: 150% 150%;
             }
@@ -403,24 +404,24 @@ ul, li{
         background: #FFF;
         box-shadow: 0px 4px 30px 0px rgba(181, 150, 241, 0.40);
         padding: 30px 45px 40px;
-        .calculator-title{
-            color: #423065;
-            font-size: 30px;
-            font-weight: 600;
-            line-height: 36px;
-            padding: 0 15px;
-        }
-        .calculator-text{
-            color: #000;
-            font-size: 20px;
-            line-height: 30px;
-            margin-top: 15px;
-            padding: 0 15px;
+        .calculator-title__wrap{
+            margin-bottom: 30px;
+            .calculator-title{
+                color: #423065;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 36px;
+                padding: 0 15px;
+            }
+            .calculator-text{
+                color: #000;
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: 15px;
+                padding: 0 15px;
+            }
         }
         .calc-project{
-            margin-top: 30px;
-
-            
             &__nums{
                 display: flex;
                 align-items: center;
@@ -474,7 +475,6 @@ ul, li{
                             font-size: 22px;
                             margin-bottom: 0;
                         }
-                        
                         &-form{
                             background-image: url(../images/calc-form-bg.png);
                             background-repeat: no-repeat;
@@ -611,6 +611,32 @@ ul, li{
                             }
                         }
 
+                        .calc-project__thank{
+                            background-image: url(../images/calc-thank-bg.png);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: right center;
+                            padding: 100px 0 80px;
+                            
+                            &-title{
+                                font-size: 50px;
+                                font-weight: 900;
+                                max-width: 656px;
+                                -webkit-background-clip: text;
+                                background-clip: text;
+                                background-image: -webkit-gradient(linear,left top, right top,from(#ff1360),color-stop(95.32%, #ff8843));
+                                background-image: linear-gradient(90deg,#ff1360,#ff8843 95.32%);
+                                color: transparent;
+                            }
+                            &-text{
+                                font-size: 20px;
+                                color: #000;
+                                margin: 15px 0 25px;
+                                font-size: 32px;
+                                max-width: 656px;
+                            }
+                        }
+
 
                         .calc-project__boxs,
                         .calc-project__tabs{
@@ -742,7 +768,8 @@ ul, li{
                         color: #FFF;
                         font-size: 24px;
                         line-height: 36px; 
-    
+                        font-weight: 900;
+
                         &.active {
                             opacity: 1;
                             pointer-events: all;
@@ -791,7 +818,7 @@ ul, li{
                     &.active{
                         color: #FFF;
                         background: linear-gradient(90deg, #FF1D5B 0%, #FF8644 100%);
-                        font-weight: 500;
+                        font-weight: 600;
                         &:hover{
                             color: #FFF;
                         }
@@ -908,6 +935,7 @@ ul, li{
             justify-content: center;
             margin: 0 auto;
             margin-top: 55px;
+            font-weight: 900;
         }
 
         .portfolio-remove2,
@@ -1216,6 +1244,7 @@ ul, li{
                 color: #FFF;
                 font-size: 24px;
                 line-height: 36px; 
+                font-weight: 900;
                 transition: all ease 0.5s;
 
                 &:hover{
@@ -1327,7 +1356,7 @@ ul, li{
                 align-items: center;
                 color: #FFF;
                 font-size: 24px;
-                font-weight: 600;
+                font-weight: 900;
                 line-height: 36px; /* 150% */
                 transition: all ease .3s;
 
@@ -3553,6 +3582,20 @@ ul, li{
         .calc-project__tabs .calc-project__tab {
             width: 48% !important;
         }
+        .calc-project__items {
+            .swiper-slide {
+                .calc-project__item {
+                    .calc-project__thank{
+                        background-size: 45%;
+                        background-position: bottom right;
+                        padding: 30px 0;
+                        &-text{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
     } 
 
     .guides-content{
@@ -4310,6 +4353,18 @@ ul, li{
                                     width: 100%;
                                 }
                             }
+
+                            .calc-project__thank{
+                                background: none;
+                                
+                                &-title{
+                                    font-size: 25px;
+                                }
+                                &-text{
+                                    text-align: center;
+                                    margin: 10px 0 16px;
+                                }
+                            }
                         }
 
                         .calc-item__btn2, 
@@ -4709,11 +4764,6 @@ ul, li{
             .modal-popup-quiz.active-thank {
                 background-position: 100% 100%;
             }
-            // .modal-popup-quiz {
-            //     .modal-popup-quiz-item-right {
-            //         bottom: 16%;
-            //     }
-            // }
         }
     } 
 
