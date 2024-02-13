@@ -307,7 +307,7 @@ ul, li {
   color: #1A2252;
   width: 617px;
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 48px;
 }
 .home-content .home-title span {
@@ -383,7 +383,7 @@ ul, li {
 .calculator-content .calculator-title__wrap .calculator-title {
   color: #423065;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 36px;
   padding: 0 15px;
 }
@@ -748,7 +748,7 @@ ul, li {
 .portfolio-title {
   text-align: center;
   font-size: 44px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 52.8px;
   background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
   background-clip: text;
@@ -903,7 +903,7 @@ ul, li {
   color: #1A2252;
   text-align: center;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 38.4px;
   margin-bottom: 50px;
 }
@@ -1197,7 +1197,7 @@ ul, li {
   color: #1A2252;
   text-align: center;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 28.8px; /* 120% */
   padding: 31.59px 0px 33.41px 0px;
   background: #FFF;
@@ -1434,6 +1434,7 @@ ul, li {
 }
 .team-slider .swiper .team-card img {
   width: 100%;
+  border-radius: 10px;
 }
 .team-slider .swiper .team-card .team-card__info {
   display: flex;
@@ -1443,7 +1444,7 @@ ul, li {
 .team-slider .swiper .team-card .team-card__info .team-card__title {
   color: #000;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 28.8px; /* 120% */
 }
 .team-slider .swiper .team-card .team-card__info .team-card__job {
@@ -1464,6 +1465,8 @@ ul, li {
 }
 .team-slider .swiper .team-slide-arrow .swiper-pagination-bullets.swiper-pagination-horizontal {
   width: auto;
+  gap: 5px;
+  display: flex;
 }
 .team-slider .swiper .team-slide-arrow .swiper-pagination-bullet {
   width: 28px;
@@ -3121,23 +3124,26 @@ ul, li {
     gap: 25px;
     text-align: center;
   }
-  .calculator-content .calculator-title {
+  .calculator {
+    padding: 50px 0;
+  }
+  .calculator .calculator-content .calculator-title {
     font-size: 26px;
     line-height: 30px;
   }
-  .calculator-content .calculator-text {
+  .calculator .calculator-content .calculator-text {
     font-size: 16px;
     line-height: 20px;
   }
-  .calculator-content .calc-project__tabs .calc-project__tab {
+  .calculator .calculator-content .calc-project__tabs .calc-project__tab {
     width: 48% !important;
   }
-  .calculator-content .calc-project__items .swiper-slide .calc-project__item .calc-project__thank {
+  .calculator .calculator-content .calc-project__items .swiper-slide .calc-project__item .calc-project__thank {
     background-size: 45%;
     background-position: bottom right;
     padding: 30px 0;
   }
-  .calculator-content .calc-project__items .swiper-slide .calc-project__item .calc-project__thank-text {
+  .calculator .calculator-content .calc-project__items .swiper-slide .calc-project__item .calc-project__thank-text {
     font-size: 16px;
   }
   .guides-content {
@@ -3670,7 +3676,6 @@ ul, li {
     font-size: 24px;
     line-height: 28px;
     text-align: center;
-    font-weight: 600;
   }
   .calculator .container .calculator-content .calculator-text {
     text-align: center;
@@ -3789,7 +3794,6 @@ ul, li {
     font-size: 25px;
     line-height: 30.4px;
     margin-bottom: 35px;
-    font-weight: 600;
   }
   .guides-content .guides-content .guides-items__wrap .guides-items {
     gap: 35px;
@@ -3825,7 +3829,6 @@ ul, li {
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 20px;
-    font-weight: 600;
   }
   .price .row {
     row-gap: 20px;
@@ -3842,7 +3845,6 @@ ul, li {
   .services-title {
     font-size: 24px;
     line-height: 29px;
-    font-weight: 600;
     margin-bottom: 30px;
   }
   .services .row {
@@ -3875,7 +3877,6 @@ ul, li {
   .client-title {
     font-size: 24px;
     line-height: 28px;
-    font-weight: 600;
   }
   .client-slider {
     margin-top: 20px;
@@ -3899,7 +3900,6 @@ ul, li {
   .team-title {
     font-size: 24px;
     line-height: 29px;
-    font-weight: 600;
   }
   .team-slider {
     margin-top: 20px;
@@ -3920,9 +3920,13 @@ ul, li {
   .team-slider .swiper .team-slide-arrow {
     gap: 15px;
   }
+  .team-slider .swiper .team-slide-arrow .swiper-pagination-bullets.swiper-pagination-horizontal {
+    gap: 0px;
+  }
   .team-slider .swiper .team-slide-arrow .swiper-pagination-bullet {
     width: 20px;
     height: 20px;
+    margin: 0 3px;
   }
   .computer-content {
     padding: 30px 15px;
@@ -3930,7 +3934,6 @@ ul, li {
   .computer-content .computer-title h1 {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 600;
   }
   .computer-content .computer-title p {
     font-size: 12px;
@@ -3938,6 +3941,7 @@ ul, li {
   }
   .computer-content .computer-body .computer-img {
     width: 100px;
+    height: auto;
   }
   .computer-content .computer-body p {
     font-size: 12px;
@@ -3995,6 +3999,9 @@ ul, li {
     font-size: 20px;
     text-align: center;
     font-weight: 600;
+  }
+  .contact-content .contact-info .contact-socicial__links {
+    justify-content: center;
   }
   .footer-logo {
     margin-bottom: 20px;

@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Bugungi sana
 let bugungiSana = new Date();
 let bugun = bugungiSana.getDate();
-let fevralNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+let fevralNames = ['января', 'февраля', 'март', 'апреля', 'май', 'июня', 'июля', 'август', 'сентября', 'октября', 'ноября', 'декабря'];
 let fevral = fevralNames[bugungiSana.getMonth()]; // Bugungi oy nomi
 
 // Bugun + 2 kun

@@ -329,7 +329,7 @@ ul, li{
             color: #1A2252;
             width: 617px;
             font-size: 40px;
-            font-weight: 800;
+            font-weight: 900;
             line-height: 48px; 
             span{
                 background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
@@ -409,7 +409,7 @@ ul, li{
             .calculator-title{
                 color: #423065;
                 font-size: 30px;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: 36px;
                 padding: 0 15px;
             }
@@ -789,7 +789,7 @@ ul, li{
     &-title{
         text-align: center;
         font-size: 44px;
-        font-weight: 800;
+        font-weight: 900;
         line-height: 52.8px; 
         background: linear-gradient(90deg, #FF1360 0%, #FF8843 95.32%);
         background-clip: text;
@@ -960,7 +960,7 @@ ul, li{
             color: #1A2252;
             text-align: center;
             font-size: 32px;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 38.4px;
             margin-bottom: 50px;
         }
@@ -1283,7 +1283,7 @@ ul, li{
             color: #1A2252;
             text-align: center;
             font-size: 24px;
-            font-weight: 500;
+            font-weight: 700;
             line-height: 28.8px; /* 120% */
             padding: 31.59px 0px 33.41px 0px;
             background: #FFF;
@@ -1564,6 +1564,7 @@ ul, li{
                 gap: 24px;
                 img{
                     width: 100%;
+                    border-radius: 10px;
                 }
                 .team-card__info{
                     display: flex;
@@ -1573,7 +1574,7 @@ ul, li{
                     .team-card__title{
                         color: #000;
                         font-size: 24px;
-                        font-weight: 500;
+                        font-weight: 800;
                         line-height: 28.8px; /* 120% */
                     }
                     .team-card__job{
@@ -1597,6 +1598,8 @@ ul, li{
                 }
                 .swiper-pagination-bullets.swiper-pagination-horizontal{
                     width: auto;
+                    gap: 5px;
+                    display: flex;
                 }
                 .swiper-pagination-bullet {
                     width: 28px;
@@ -3569,34 +3572,37 @@ ul, li{
         } 
     }
 
-    .calculator-content{
-        .calculator-title{
-            font-size: 26px;
-            line-height: 30px;
-        }
-        .calculator-text{
-            font-size: 16px;
-            line-height: 20px;
-        }
-
-        .calc-project__tabs .calc-project__tab {
-            width: 48% !important;
-        }
-        .calc-project__items {
-            .swiper-slide {
-                .calc-project__item {
-                    .calc-project__thank{
-                        background-size: 45%;
-                        background-position: bottom right;
-                        padding: 30px 0;
-                        &-text{
-                            font-size: 16px;
+    .calculator{
+        padding: 50px 0;
+        .calculator-content{
+            .calculator-title{
+                font-size: 26px;
+                line-height: 30px;
+            }
+            .calculator-text{
+                font-size: 16px;
+                line-height: 20px;
+            }
+    
+            .calc-project__tabs .calc-project__tab {
+                width: 48% !important;
+            }
+            .calc-project__items {
+                .swiper-slide {
+                    .calc-project__item {
+                        .calc-project__thank{
+                            background-size: 45%;
+                            background-position: bottom right;
+                            padding: 30px 0;
+                            &-text{
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
             }
-        }
-    } 
+        } 
+    }
 
     .guides-content{
         padding: 24px 13px 34px;
@@ -4282,7 +4288,6 @@ ul, li{
                     font-size: 24px;
                     line-height: 28px;
                     text-align: center;
-                    font-weight: 600;
                 }
                 .calculator-text{
                     text-align: center;
@@ -4433,7 +4438,6 @@ ul, li{
                 font-size: 25px;
                 line-height: 30.4px;
                 margin-bottom: 35px;
-                font-weight: 600;
             }
             .guides-content {
                 .guides-items__wrap {
@@ -4484,7 +4488,6 @@ ul, li{
             font-size: 24px;
             line-height: 28px;
             margin-bottom: 20px;
-            font-weight: 600;
         }
         .row{
             row-gap: 20px;
@@ -4504,7 +4507,6 @@ ul, li{
         &-title{
             font-size: 24px;
             line-height: 29px;
-            font-weight: 600;
             margin-bottom: 30px;
         }
 
@@ -4541,7 +4543,6 @@ ul, li{
         &-title{
             font-size: 24px;
             line-height: 28px;
-            font-weight: 600;
         }
         &-slider{
             margin-top: 20px;
@@ -4569,7 +4570,6 @@ ul, li{
         &-title{
             font-size: 24px;
             line-height: 29px;
-            font-weight: 600;
         }
 
         &-slider {
@@ -4595,10 +4595,15 @@ ul, li{
 
                 .team-slide-arrow {
                     gap: 15px;
+                    .swiper-pagination-bullets.swiper-pagination-horizontal{
+                        gap: 0px;
+                    }
                     .swiper-pagination-bullet {
                         width: 20px;
                         height: 20px;
+                        margin: 0 3px;
                     }
+                    
                 }
             } 
         }
@@ -4610,7 +4615,6 @@ ul, li{
             h1{
                 font-size: 16px;
                 line-height: 20px;
-                font-weight: 600;
             }
             p{
                 font-size: 12px;
@@ -4621,6 +4625,7 @@ ul, li{
         .computer-body{
             .computer-img{
                 width: 100px;
+                height: auto;
             }
             p{
                 font-size: 12px;
@@ -4687,6 +4692,9 @@ ul, li{
                         font-size: 20px;
                         text-align: center;
                         font-weight: 600;
+                    }
+                    &__links{
+                        justify-content: center;
                     }
                 }
             }
