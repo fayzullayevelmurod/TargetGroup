@@ -343,11 +343,11 @@ ul, li {
   text-align: center;
   color: #1A2252;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 22px;
 }
 .home-content .home-items .home-item__text b {
-  font-weight: 600;
+  font-weight: 700;
 }
 .home-content .home-link {
   display: flex;
