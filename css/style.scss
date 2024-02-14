@@ -316,7 +316,7 @@ ul, li{
 
 // Home start
 .home{
-    background-image: url(../images/home-bg.jpg);
+    background-image: url(../images/home-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -477,7 +477,7 @@ ul, li{
                             margin-bottom: 0;
                         }
                         &-form{
-                            background-image: url(../images/calc-form-bg.png);
+                            background-image: url(../images/calc-form-bg.webp);
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: left -30px bottom -20px;
@@ -613,7 +613,7 @@ ul, li{
                         }
 
                         .calc-project__thank{
-                            background-image: url(../images/calc-thank-bg.png);
+                            background-image: url(../images/calc-thank-bg.webp);
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: right center;
@@ -1936,7 +1936,7 @@ ul, li{
             flex-wrap: wrap;
             background-repeat: no-repeat;
             background-position: right center;
-            background-image: url(../images/popup-quiz-bg.png);
+            background-image: url(../images/popup-quiz-bg.webp);
             overflow: hidden;
             transition: all ease 1s;
 
@@ -1978,7 +1978,7 @@ ul, li{
 
             &.active-thank {
                 position: relative;
-                background-image: url(../images/bg-thank.png);
+                background-image: url(../images/bg-thank.webp);
                 background-position: center right;
             }
 
