@@ -323,7 +323,7 @@ let fevral = fevralNames[bugungiSana.getMonth()]; // Bugungi oy nomi
 // Bugun + 2 kun
 bugungiSana.setDate(bugun + 2);
 let ertangiSana = bugungiSana.getDate();
-let ertangiFevral = fevralNames[bugungiSana.getMonth()]; 
+let ertangiFevral = fevralNames[bugungiSana.getMonth()];
 
 document.querySelector('.home-item__text-date').textContent = 'до ' + ertangiSana + ' ' + ertangiFevral;
 
@@ -501,13 +501,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // video player
-const playerCaptions = new MediaElementPlayer('player', {
-    iconSprite: '../images/icons/play-icon.svg', 
-});
 
-const firstVideo = document.getElementById('firstVideo');
-const secondVideo = document.getElementById('secondVideo');
+try {
+    const playerCaptions = new MediaElementPlayer('player', {
+        iconSprite: '../images/icons/play-icon.svg',
+    });
+} catch (error) {}
 
-firstVideo.addEventListener('ended', function () {
-    secondVideo.play();
-});
+try {
+    const firstVideo = document.getElementById('firstVideo');
+    const secondVideo = document.getElementById('secondVideo');
+
+    firstVideo.addEventListener('ended', function () {
+        secondVideo.play();
+    });
+} catch (error) { }
