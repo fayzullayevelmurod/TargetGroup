@@ -502,13 +502,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // video player
 const playerCaptions = new MediaElementPlayer('player', {
-    iconSprite: '../images/icons/play-icon.svg', // path to svg-spritemap for all icons
+    iconSprite: '../images/icons/play-icon.svg', 
 });
 
 const firstVideo = document.getElementById('firstVideo');
 const secondVideo = document.getElementById('secondVideo');
 
 firstVideo.addEventListener('ended', function () {
-    // Birinci video tamamlandığında, ikinci videoyu oynat
     secondVideo.play();
 });
